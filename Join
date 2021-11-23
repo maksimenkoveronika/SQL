@@ -1,0 +1,4 @@
+select distinct maker,speed
+from product As p Join Laptop l
+on p.model=l.model 
+where hd>=10
