@@ -1,0 +1,13 @@
+select model, speed, hd
+from pc
+where price<500
+
+
+select DISTINCT maker
+from product
+where type='Printer'
+
+
+select model, ram, screen
+from Laptop 
+where price>1000
