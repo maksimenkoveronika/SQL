@@ -1,4 +1,17 @@
+1)
 select maker, avg(laptop.screen)
 from product
 inner join laptop on product.model = laptop.model
 group by maker
+
+2)
+select maker, MAX(price) as max_price
+from product
+inner join pc on product.model=pc.model
+group by maker
+
+3)
+select speed, avg(price) AS avg_price
+from pc
+where speed>600
+group by speed
