@@ -10,3 +10,21 @@ from product
 where type='PC'
 group by maker
 having count(model)>=3
+
+3)
+Select product.maker, AVG(pc.hd)
+from pc, product 
+where product.model = pc.model and product.maker in ( SELECT DISTINCT maker
+from product
+where product.type = 'printer')
+Group by maker
+
+4)
+select count(maker)
+from product
+where maker in
+(
+  Select maker from product
+  group by maker
+  having count(model) = 1
+)
