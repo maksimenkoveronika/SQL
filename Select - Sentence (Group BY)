@@ -3,3 +3,10 @@ Select hd
 From pc
 Group BY hd
 Having count(*)>=2
+
+2)
+select maker, count(model)
+from product
+where type='PC'
+group by maker
+having count(model)>=3
