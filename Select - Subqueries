@@ -1,4 +1,15 @@
+1)
 select distinct maker, price
 from printer
 inner join product on product.model=printer.model
 where color ='y'and price= (select min(price) from printer where color ='y' )
+
+2)
+select count(maker)
+from product
+where maker in
+(
+  Select maker from product
+  group by maker
+  having count(model) = 1
+)
