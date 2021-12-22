@@ -15,3 +15,14 @@ select speed, avg(price) AS avg_price
 from pc
 where speed>600
 group by speed
+
+4)
+select maker
+from pc
+inner join product on pc.model=product.model
+where speed >=750
+intersect
+select maker
+from laptop
+inner join product on laptop.model=product.model
+where speed >=750
