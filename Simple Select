@@ -1,13 +1,20 @@
+1)
 select model, speed, hd
 from pc
 where price<500
 
-
+2)
 select DISTINCT maker
 from product
 where type='Printer'
 
-
+3)
 select model, ram, screen
 from Laptop 
 where price>1000
+
+4)
+select distinct class, country
+from classes
+where bore >= 16
+
