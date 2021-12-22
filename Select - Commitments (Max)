@@ -1,0 +1,3 @@
+select model, price
+from printer
+WHERE price = (select max(price) from printer)
