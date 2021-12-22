@@ -1,0 +1,5 @@
+1)
+Select hd 
+From pc
+Group BY hd
+Having count(*)>=2
