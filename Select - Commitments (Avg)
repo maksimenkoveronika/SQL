@@ -1,2 +1,8 @@
+1)
 SELECT AVG(speed) AS AVG_speed
 FROM PC
+
+2)
+SELECT AVG(speed) AS AVG_speed
+FROM laptop
+where price>1000
